@@ -60,7 +60,6 @@ class ActiveDirectoryInventory(object):
       inv_data.update({ '_meta': { 'hostvars': {} } })
 
       attrs = ['cn', 'dNSHostName', 'operatingSystem', 'operatingSystemVersion', 'operatingSystemServicePack']
-      attrs = ['*']
       objectFilter = '(objectClass=Computer)'
 
       try:
