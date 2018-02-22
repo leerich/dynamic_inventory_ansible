@@ -8,8 +8,8 @@ Since PuppetDB authenticates with Certificates, you will need the CA Cert, and t
 Alternatively, you can enable HTTP access to PuppetDB (not recommended) and it will require no authentication to pull any data.
 
 ```
-PUPPETDB_URL: http://10.0.101.101:8080/pdb/query/v4/facts
-PUPPETDB_QUERY: '{"query":["=","certname","puppetclient1.lab.rhlabs.net"]}'
+PUPPETDB_URL: http://puppetdb:8080/pdb/query/v4/facts
+PUPPETDB_QUERY: '{"query":["=","certname","puppetclient1.mydomain.net"]}'
 PUPPETDB_CA_CERT: /path/to/cacert
 PUPPETDB_CERT: /path/to/cert
 PUPPETDB_KEY: /path/to/privatekey
