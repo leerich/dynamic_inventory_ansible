@@ -87,6 +87,7 @@ class ActiveDirectoryInventory(object):
             if os not in inv_data:
               inv_data.update({ os: { 'hosts': [], 'vars': {} } })
             inv_data[os]['hosts'].append(name)
+            inv_data['_meta']['hostvars'][name].update({ 'operatingSystem' : pc[1]['operatingSystem'][0] })
 
           if 'cn' in pc[1]:
             inv_data['_meta']['hostvars'][name].update({ 'cn' : pc[1]['cn'][0] })
