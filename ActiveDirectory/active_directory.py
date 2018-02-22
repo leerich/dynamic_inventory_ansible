@@ -84,6 +84,10 @@ class ActiveDirectoryInventory(object):
 
           if 'operatingSystem' in pc[1]:
             os = pc[1]['operatingSystem'][0]
+            os = os.replace(' Server', '')
+            os = os.replace(' Enterprise', '')
+            os = os.replace(' Standard', '')
+            os = os.replace(' Essentials', '')
             if os not in inv_data:
               inv_data.update({ os: { 'hosts': [], 'vars': {} } })
             inv_data[os]['hosts'].append(name)
