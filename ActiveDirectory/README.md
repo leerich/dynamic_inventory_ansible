@@ -4,7 +4,7 @@ An Ansible Dynamic Inventory Script for ingesting Hosts from Active Directory
 
 To utilize this script, you will need to create a new Credential Type in Ansible Tower.   Below is the form you will need to create.
 
-### INPUT CONFIGURATION:
+#### INPUT CONFIGURATION:
 ```
 fields:
   - type: string
@@ -27,7 +27,7 @@ required:
   - base_dn
 ```
 
-### INJECTOR CONFIGURATION
+#### INJECTOR CONFIGURATION
 ```
 env:
   AD_BASE_DN: '{{ base_dn }}'
@@ -36,3 +36,10 @@ env:
   AD_DC: '{{ dc }}'
 ```
 
+## Additional Packages
+You may require additional packages on your Machine for this to work.  For RHEL 7, just issue these commands
+```
+yum install openldap-devel
+pip install --upgrade setuptools
+pip install python-ldap
+```
