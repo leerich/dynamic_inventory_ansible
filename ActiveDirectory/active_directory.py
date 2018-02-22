@@ -96,6 +96,8 @@ class ActiveDirectoryInventory(object):
             inv_data['_meta']['hostvars'][name].update({ 'cn' : pc[1]['cn'][0] })
           if 'operatingSystemVersion' in pc[1]:
             inv_data['_meta']['hostvars'][name].update({ 'operatingSystemVersion' : pc[1]['operatingSystemVersion'][0] })
+          if 'operatingSystemServicePack' in pc[1]:
+            inv_data['_meta']['hostvars'][name].update({ 'operatingSystemServicePack' : pc[1]['operatingSystemServicePack'][0] })
 
       return inv_data
 
