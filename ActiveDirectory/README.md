@@ -5,7 +5,8 @@ An Ansible Dynamic Inventory Script for ingesting Hosts from Active Directory
 To utilize this script, you will need to create a new Credential Type in Ansible Tower.   Below is the form you will need to create.
 
 ### INPUT CONFIGURATION:
-```fields:
+```
+fields:
   - type: string
     id: dc
     label: 'Active Directory URL (ex: ldap://labdc01:389)'
@@ -27,7 +28,8 @@ required:
 ```
 
 ### INJECTOR CONFIGURATION
-```env:
+```
+env:
   AD_BASE_DN: '{{ base_dn }}'
   AD_BIND_PASS: '{{ password }}'
   AD_BIND_USER: '{{ username }}'
