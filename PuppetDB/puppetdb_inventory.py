@@ -54,7 +54,7 @@ class PuppetDBInventory(object):
           sys.exit(0)
 
         if os.environ.get('PUPPETDB_CERT', ''):
-          self.puppetdb_ca = os.environ['PUPPETDB_CERT']
+          self.puppetdb_cert = os.environ['PUPPETDB_CERT']
         else:
           print json.dumps(self.empty_inventory())
           sys.exit(0)
